@@ -51,6 +51,7 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../style/general.scss' as *;
 
 div,
 nav{
@@ -59,6 +60,10 @@ nav{
 
 div.row img{
     width: 100%;
+}
+
+div.col-6{
+  padding-top: 7rem;
 }
 
 
