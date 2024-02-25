@@ -16,8 +16,8 @@
               </li>
             </ul>
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary" type="submit">Search</button>
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-gear"></i>
         </form>
       </div>
     </div>
@@ -58,6 +58,11 @@ export default {
 div,
 nav{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+i{
+  padding: 0 .5rem;
+  font-size: 1.5rem;
 }
 
 
