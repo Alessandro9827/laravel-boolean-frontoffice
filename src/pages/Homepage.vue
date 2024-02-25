@@ -20,7 +20,7 @@
           I nostri Cocktail più amati
       </h2>
       <SingleCard class="card p-0 col-3 mx-4 my-5" v-for="cocktail in cocktails" :key="cocktail.id"
-                :title="cocktail.name" :image="cocktail.image" :price="cocktail.price" :linkRoute="{ name: 'single-post', params: { id: cocktail.id}}" linkLabel="Read more..."
+                :title="cocktail.name" :image="cocktail.image" :price="cocktail.price" :linkRoute="{ name: 'single-cocktail', params: { id: cocktail.id}}" linkLabel="Read more..."
             />
     </div>
     </main>
@@ -31,48 +31,45 @@ import SingleCard from '@/components/SingleCard.vue';
 import axios from 'axios';
 export default {
     name: 'Homepage',
-    data(){
-        return{
+    data() {
+        return {
             cocktails: [],
         }
     },
-    methods:{
-        getCocktails(){
+    methods: {
+        getCocktails() {
             axios.get('http://127.0.0.1:8000/api/listCocktails', {
                 params: {
                 }
             })
-            .then((response) => {
-                console.log(response.data.results.data);
-                console.log(this.cocktails);
-                this.cocktails = response.data.results.data;
-            })
-            .catch(function (error) {
-                console.warn(error);
-            })
+                .then((response) => {
+                    console.log(response.data.results);
+                    this.cocktails = response.data.results;
+                })
+                .catch(function (error) {
+                    console.warn(error);
+                })
         }
     },
-    components:{
+    components: {
         SingleCard
     },
-    created(){
+    created() {
         this.getCocktails();
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
-main{
+main {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-div.row img{
+div.row img {
     width: 100%;
 }
 
-div.col-6{
-  padding-top: 7.5rem;
+div.col-6 {
+    padding-top: 7.5rem;
 }
-
 </style>

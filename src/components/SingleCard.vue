@@ -8,9 +8,6 @@
                 {{ name }}
             </h1>
 
-
-            <img v-if="image" :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
-
             <p class="card-text" v-if="fullLength">
                 {{ price }}
             </p>
@@ -19,9 +16,6 @@
             </p>
             <p class="card-text" v-if="fullLength">
                 {{ ingredients }}
-            </p>
-            <p v-else>
-                {{ content.substring(0, 120) }}...
             </p>
 
 
@@ -40,17 +34,17 @@ export default {
 
         }
     },
-    props:{
+    props: {
         name: {
             required: true,
             type: String,
         },
         price: {
             required: true,
-            type: String,
+            type: Number,
         },
         image: {
-            required: false,
+            required: true,
             type: String,
         },
         description: {
@@ -63,7 +57,7 @@ export default {
         },
         linkRoute: {
             required: false,
-            type: [ Object, String ]
+            type: [Object, String]
         },
         linkLabel: {
             required: false,
@@ -76,6 +70,4 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
