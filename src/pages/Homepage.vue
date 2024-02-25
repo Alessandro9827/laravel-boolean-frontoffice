@@ -19,17 +19,15 @@
       <h2 class="text-center mt-5">
           I nostri Cocktail più amati
       </h2>
-      <ul class="text-center">
-
-            <li v-for="cocktail in cocktails" :key="cocktails.id">
-                {{ cocktail.name }} - {{ cocktail.price }} - {{ cocktail.description }}
-            </li>
-        </ul>
+      <SingleCard class="card p-0 col-3 mx-4 my-5" v-for="cocktail in cocktails" :key="cocktail.id"
+                :title="cocktail.name" :image="cocktail.image" :price="cocktail.price" :linkRoute="{ name: 'single-post', params: { id: cocktail.id}}" linkLabel="Read more..."
+            />
     </div>
     </main>
 </template>
 
 <script>
+import SingleCard from '@/components/SingleCard.vue';
 import axios from 'axios';
 export default {
     name: 'Homepage',
@@ -46,12 +44,16 @@ export default {
             })
             .then((response) => {
                 console.log(response.data.results.data);
+                console.log(this.cocktails);
                 this.cocktails = response.data.results.data;
             })
             .catch(function (error) {
                 console.warn(error);
             })
         }
+    },
+    components:{
+        SingleCard
     },
     created(){
         this.getCocktails();

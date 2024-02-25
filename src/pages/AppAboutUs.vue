@@ -96,8 +96,8 @@ img{
 }
 
 p.info{
-    margin: 1rem 9rem;
-    font-size: 15px;
+    margin: 1rem 3.5rem;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
