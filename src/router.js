@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppCocktail from './pages/AppCocktail.vue';
 import AppAboutUs from './pages/AppAboutUs.vue';
 import AppContacts from './pages/AppContacts.vue';
-import Homepage from './pages/Homepage.vue'
-
+import Homepage from './pages/Homepage.vue';
+import AppSingleCocktail from './pages/AppSingleCocktail.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -27,7 +27,12 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: AppContacts
-        }
+        },
+        {
+            path: '/cocktail/:id',
+            name: 'single-cocktail',
+            component: AppSingleCocktail
+        },
     ]
 });
 

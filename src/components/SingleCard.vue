@@ -1,25 +1,21 @@
 <template lang="">
     <div>
         <div class="card-body">
-
             <img v-if="image" :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
 
             <h1 class="card-title mb-3">
                 {{ name }}
             </h1>
-
-            <p class="card-text" v-if="fullLength">
-                {{ price }}
-            </p>
-            <p class="card-text" v-if="fullLength">
+            <p class="card-text">
                 {{ description }}
             </p>
-            <p class="card-text" v-if="fullLength">
+            <p class="card-text">
                 {{ ingredients }}
             </p>
-
-
-            <div class="w-100 d-flex mb-3" v-if="linkRoute">
+            <p class="card-text">
+                {{ price }} €
+            </p>
+            <div class="w-100 d-flex mb-3">
                 <router-link :to="linkRoute" class="btn btn-primary">
                     {{ linkLabel }}
                 </router-link>
