@@ -4,8 +4,8 @@
         <div class="">
         <div class="row us">
             <div class="col-6 p-0">
-        <img src="https://t4.ftcdn.net/jpg/01/65/72/91/360_F_165729135_F6Svm7ymFgIx3dGHFxp4NCAoY84w03y5.jpg" alt="" class="">
-        </div>
+                <img src="https://t4.ftcdn.net/jpg/01/65/72/91/360_F_165729135_F6Svm7ymFgIx3dGHFxp4NCAoY84w03y5.jpg" alt="" class="">
+            </div>
         <div class="col-6 bg-body-tertiary border border-1 vertical-align-center">
            <h2>
                CHI SIAMO
@@ -13,7 +13,7 @@
            <p>
                <span class="fw-bold text-uppercase">Boolean Bar</span> è l’innovativo marchio italiano di bevande pre-miscelate, fra i primi a credere e investire nel settore dei cocktail “ready to drink”. La nostra mission è quella di poter offrire a tutti la possibilità di bere un cocktail artigianale fatto in Italia, dove e quando si desidera, semplicemente versandolo in un bicchiere colmo di ghiaccio.
            </p>
-       </div>
+        </div>
        <div class="p-2 bg-black text-white text-center">
         <h2 class="text-uppercase mt-5">Artigianalità</h2>
         <p class="info">
@@ -89,6 +89,7 @@ div{
 
 img{
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .us div.col-6{

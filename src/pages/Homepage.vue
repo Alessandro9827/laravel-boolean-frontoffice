@@ -27,7 +27,6 @@
                     <div class="card-body mb-4">
                         <h3 class="card-title text-center mb-1 pt-4 fw-bold text-uppercase">{{ cocktail.name }}</h3>
                         <p class="card-text text-center mt-3"><span class="fw-bold text-uppercase">Come lo prepariamo: </span> {{ cocktail.description }}</p>
-                        <p class="card-text text-center">{{ cocktail.price }} €</p>
                     </div>
                 </div>
             </div>
@@ -85,5 +84,9 @@ div.row img {
 
 div.col-6 {
     padding-top: 7.5rem;
+}
+
+img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 </style>
