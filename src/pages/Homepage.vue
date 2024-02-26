@@ -19,6 +19,20 @@
       <h2 class="text-center mt-5">
           I nostri Cocktail più amati
       </h2>
+      <div class="">
+        <div class="d-flex justify-content-center">
+            <div class="pt-5">
+                <div class="" style="width: 35rem;" v-for="cocktail in cocktails" :key="cocktail.id">
+                    <img :src="cocktail.image" class="card-img-top" alt="...">
+                    <div class="card-body mb-4">
+                        <h3 class="card-title text-center mb-1 pt-4 fw-bold text-uppercase">{{ cocktail.name }}</h3>
+                        <p class="card-text text-center mt-3"><span class="fw-bold text-uppercase">Come lo prepariamo: </span> {{ cocktail.description }}</p>
+                        <p class="card-text text-center">{{ cocktail.price }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
       <SingleCard class="card p-0 col-3 mx-4 my-5" v-for="cocktail in cocktails" :key="cocktail.id"
                 :title="cocktail.name" :image="cocktail.image" :price="cocktail.price" :linkRoute="{ name: 'single-cocktail', params: { id: cocktail.id}}" linkLabel="Read more..."
             />
