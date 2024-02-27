@@ -32,15 +32,13 @@
             </div>
         </div>
       </div>
-      <SingleCard class="card p-0 col-3 mx-4 my-5" v-for="cocktail in cocktails" :key="cocktail.id"
-                :title="cocktail.name" :image="cocktail.image" :price="cocktail.price" :linkRoute="{ name: 'single-cocktail', params: { id: cocktail.id}}" linkLabel="Read more..."
-            />
+     
     </div>
     </main>
 </template>
 
 <script>
-import SingleCard from '@/components/SingleCard.vue';
+
 import axios from 'axios';
 export default {
     name: 'Homepage',
@@ -64,9 +62,7 @@ export default {
                 })
         }
     },
-    components: {
-        SingleCard
-    },
+   
     created() {
         this.getCocktails();
     }

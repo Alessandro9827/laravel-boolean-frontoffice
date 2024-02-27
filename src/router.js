@@ -29,7 +29,7 @@ const router = createRouter({
             component: AppContacts
         },
         {
-            path: '/cocktail/:id',
+            path: '/single-cocktail/:id',
             name: 'single-cocktail',
             component: AppSingleCocktail
         },
