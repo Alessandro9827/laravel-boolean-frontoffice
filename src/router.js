@@ -18,6 +18,12 @@ const router = createRouter({
             name: 'cocktails',
             component: AppCocktail
         },
+         {
+            path: '/cocktails/:id',
+            name: 'single-cocktail',
+            component: AppSingleCocktail
+        },
+
         {
             path: '/about-us',
             name: 'about-us',
@@ -28,11 +34,7 @@ const router = createRouter({
             name: 'contacts',
             component: AppContacts
         },
-        {
-            path: '/single-cocktail/:id',
-            name: 'single-cocktail',
-            component: AppSingleCocktail
-        },
+       
     ]
 });
 

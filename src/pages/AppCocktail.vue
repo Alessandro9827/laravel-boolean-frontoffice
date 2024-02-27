@@ -19,7 +19,7 @@
             <div class='d-flex justify-content-center' >
 
                 <div class="d-flex justify-content-center">
-              <router-link :to="{ name: 'single-cocktail', params: { id: cocktail.id } }">
+              <router-link :to="{ name:'single-cocktail', params: { id: cocktail.id } }">
                 <button class="btn btn-primary">More.</button>
               </router-link>
             </div>

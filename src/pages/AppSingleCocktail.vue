@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <template lang="html">
+      
   <div class="container">
     <div class="row">
       <h1 class="text-center">{{ cocktail.name }}</h1>
@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-</template>
+
        
     </div>
 </template>
