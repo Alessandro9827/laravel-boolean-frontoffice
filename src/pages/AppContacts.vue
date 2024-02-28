@@ -27,7 +27,7 @@
                 <option>Disgusting</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            <button type="submit" class="btn btn-dark text-uppercase mt-2">Submit</button>
             </form>
             </div>
         </div>
