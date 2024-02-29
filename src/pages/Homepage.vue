@@ -17,7 +17,7 @@
     </div>
     <div>
       <h2 class="text-center mt-5">
-          I nostri Cocktail più amati
+          I nostri Cocktail più amati!
       </h2>
       <div class="">
         <div class="d-flex justify-content-center">
